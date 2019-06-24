@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
     tbl.string("username");
     tbl.string("email");
     tbl.string("role");
-
+    tbl.boolean("is_payment");
     tbl.integer("access_code");
   });
   console.log("created teachers table");
@@ -14,3 +14,4 @@ exports.up = function(knex, Promise) {
 exports.down = function(knex, Promise) {
   return knex.schema.dropTableIfExists("teachers");
 };
+ 
